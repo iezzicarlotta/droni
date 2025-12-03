@@ -1,0 +1,96 @@
+:root{
+	--bg: #fff7fb;
+	--card: #ffffff;
+	--muted: #6b5e6a;
+	--primary: #d63384; /* strong pink */
+	--primary-600: #c12576;
+	--accent: #f7d6e6; /* pale pink */
+	--glass: rgba(255,255,255,0.7);
+	--shadow: 0 6px 18px rgba(128,81,106,0.12);
+}
+
+*{box-sizing:border-box}
+body{
+	background: linear-gradient(180deg,var(--bg),#fff);
+	font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	color: #3e2f36;
+	margin:0;
+}
+
+.container{max-width:1100px}
+
+/* Home hero */
+.hero{min-height:70vh;display:flex;align-items:center;justify-content:center;padding:40px}
+.hero-inner{max-width:900px}
+.display-title{font-size:48px;color:var(--primary);font-weight:800;margin-bottom:8px}
+.lead{font-size:1.15rem;color:#6d4d59}
+
+.choice-grid{display:flex;gap:28px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.choice-card{width:320px;display:flex;flex-direction:column;align-items:center;text-decoration:none;background:linear-gradient(180deg,var(--card),#ecc3ee);padding:22px;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(200,150,180,0.08);color:inherit}
+.choice-card:hover{transform:translateY(-6px)}
+.choice-icon{font-size:34px;background:linear-gradient(135deg,var(--primary),#ffb6db);width:72px;height:72px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#db92f1;margin-bottom:12px}
+.choice-card h3{margin:6px 0}
+
+@media (max-width:760px){
+	.display-title{font-size:32px}
+	.choice-card{width:100%;max-width:420px}
+}
+
+h1{color:var(--primary); font-weight:700}
+
+.card{background:var(--card); border-radius:12px; box-shadow:var(--shadow); padding:18px}
+
+.btn-primary{
+	background: linear-gradient(180deg,var(--primary),var(--primary-600));
+	border: none; color: #fff; padding:10px 16px; border-radius:10px;
+}
+.btn-primary:hover{filter:brightness(.95)}
+
+/* input styles */
+.form-control{border-radius:10px; border:1px solid #ecd3df; padding:10px}
+
+#map{border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(200,150,180,0.2)}
+
+.muted{color:var(--muted)}
+
+/* order card */
+#orderDetails p{margin:6px 0}
+
+/* small helpers */
+.small-muted{font-size:0.9rem; color:#7a616f}
+
+/* admin layout tweaks */
+#dronesList pre, #pilotsList pre{background:linear-gradient(90deg,#fff,#fff); padding:12px; border-radius:8px; border:1px solid #f1dbe6}
+
+/* responsive */
+@media (max-width:720px){
+	#map{height:360px}
+}
+
+/* subtle header bar */
+.topbar{display:flex;align-items:center;gap:16px;padding:12px;border-radius:12px;margin-bottom:18px;background:linear-gradient(90deg,var(--accent),#fff)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--primary),#ffb6db);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+
+/* map leaflet tweaks */
+.leaflet-container{border-radius:12px}
+
+pre{background:transparent;padding:0;margin:0}
+
+/* footer small */
+.small-footer{font-size:0.85rem;color:#8b6d77;margin-top:18px}
+
+/* skeleton */
+.skeleton{background:linear-gradient(90deg,#f4e6ef,#f8dfee,#f4e6ef);height:12px;border-radius:8px;animation:shimmer 1.4s infinite}
+@keyframes shimmer{0%{background-position:-200px 0}100%{background-position:200px 0}}
+
+/* table tweaks */
+.table{border-collapse:collapse}
+.table th{background:transparent;border-bottom:2px solid rgba(200,150,180,0.15);padding:10px;text-align:left}
+.table td{padding:10px;border-top:1px solid rgba(200,150,180,0.05)}
+
+/* buttons */
+.btn{transition:transform .12s ease, box-shadow .12s ease}
+.btn:active{transform:translateY(1px)}
+
+.btn-outline{background:transparent;border:1px solid rgba(214,51,132,0.15);color:var(--primary);padding:8px 12px;border-radius:10px}
